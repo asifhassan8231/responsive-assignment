@@ -8,11 +8,17 @@ body{
     margin: 0;
     padding: 0;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /*--------------
  top header styles 
  --------------*/
-header{
+.header-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-column-gap: 102px;
@@ -51,6 +57,7 @@ header{
      grid-column-gap: 30px;
  }
  .blog{
+
      padding: 20px;
      box-shadow: 0 0 45px 0px rgba(0, 0, 0, 0.15);
      border-radius: 5px;
@@ -113,3 +120,31 @@ header{
     height: 32px;
     margin-right: 5px;
 }
+/*------------
+ Media Queries 
+ ------------*/
+ @media only screen and (max-width:688px) {
+    .main{
+         width: 100%;
+     }
+    .blog-section .blogs ,.header-container,.user-section{
+       grid-template-columns: repeat(1,1fr);
+       transform: scale(0.9);
+    }
+    .blog,.left-part,.right-part,.header-title,.header-banner{
+        flex-direction: column;
+    }
+     
+ }
+ @media only screen and (min-width:688px) and (max-width:992px) {
+    .main{
+        width: 100%;
+    }
+   .blog-section .blogs ,.header-container,.user-section{
+      grid-template-columns: repeat(2,1fr);
+      transform: scale(0.9);
+   }
+   .blog{
+       flex-direction: column;
+   }
+ }
