@@ -15,12 +15,30 @@ body{
 header{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 102px;
     padding: 90px 150px;
     background-color: #2D25A0;
+}
+.header-title h1{
+    font-weight: bold;
+    font-size: 64px;
+    color: white;
 }
  .header-banner img{
     width: 556.01px;
     height: 438px;
+ }
+ .button{
+     background-image:linear-gradient(#E02C6D,purple);
+     padding: 10px 24px;
+     color: white;
+     border-radius: 5px;
+ }
+ header:hover .button{
+     
+     transform: scale(1.5) translateX(40px);
+     transform-origin: right;
+     transition: transform 0.5s ease-in-out;
  }
 /*---------------
  player blog styles
@@ -33,17 +51,58 @@ header{
      grid-column-gap: 30px;
  }
  .blog{
-     padding: 15px;
+     padding: 20px;
      box-shadow: 0 0 45px 0px rgba(0, 0, 0, 0.15);
      border-radius: 5px;
+     
  }
  .blog img{
-    width: 300px;
+    width: 315px;
     height: 256px;
+
+ }
+ .player-detail{
+     color: #6C6C6C;
+     font-size: 16px;
+     font-weight: 400;
+ }
+ /*-------------------
+  user section styles
+  ----------------*/
+  .user-section{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 35px;
+      padding: 60px 210px;
+  }
+  .left-part,.right-part{
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow:  0 0 45px 0px rgba(0, 0, 0, 0.15);
+  }
+  .next-match img, .right-part img{
+      width: 300px;
+      height: 250px;
+  }
+ .submit-button{
+     background-color: purple;
+     padding: 10px 30px;
+     margin-top: 10px;
+     color: white;
+     font-weight: 600;
+     border-radius: 5px;
  }
  /*-----------
   footer styles 
   ----------*/
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 0;
+}
 
 .logo img{
     width: 483.87px;
@@ -53,10 +112,4 @@ header{
     width: 32px;
     height: 32px;
     margin-right: 5px;
-}
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
 }
